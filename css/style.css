@@ -42,13 +42,13 @@ header {
     left: 0;
     width: 100%;
     padding: 1.1rem;
-    background-color: var(--color01);
+    background-color: var(--bg-color-01);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 
-    border: solid 1px var(--color02);
+    border: solid 1px var(--bg-color-01);
 }
 
 .logo {
@@ -80,16 +80,17 @@ section {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    gap: 20px;
 }
+
 
 .home-img img {
     border-right: solid 0.6rem var(--main-color);
     border-bottom: solid 0.6rem var(--main-color);
     border-image: linear-gradient(135deg, transparent 50%, var(--main-color)) 1;
-    width: 100px;
-    border-image-slice: 1;
-   /*margin-top: 0;
-    margin-left: 20px;*/
+    width: 40%;
+    margin-top: 0;
+    margin-left: auto;
 }
 
 .sobre-img img {
@@ -98,8 +99,8 @@ section {
     border-image: linear-gradient(225deg, transparent 50%, var(--main-color)) 1;
 }
 
-.home-img img, .about-img img {
-    width: 80%;
+.about-img img {
+    width: 10%;
 }
 
 .sobre {
@@ -121,14 +122,64 @@ section {
     font-size: 1.6rem;
 }
 
+.home-content p, .sobre-content p {
+    font-size: 1.2rem;
+    text-align: justify;
+}
 
+.services h2,
+.portfolio,
+.contato h2{
+    font-size: 2.2rem;
 
+}
 
+.services-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
+.services-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 25rem;
+    margin-bottom: 1rem;
+}
 
+.services-container .services-box {
+    padding: 2rem 1rem 2.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: soled 0.15rem var(--main-color);
+    background-color: var(--bg-color-02);
+    transition: 0.5 ease;
+}
 
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.01);
+}
 
+.services-box i {
+    font-size: 4.3rem;
+    color: var(--main-color);
+}
 
+.services-box h3 {
+    font-size: 1.5rem;
+}
+
+.services-box p {
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 
 
@@ -137,15 +188,12 @@ section {
 .nav-container {
     width: 100%;
     height: 60px;
-    background-color: #525050;
+    background-color: var(--bg-color-01);
     padding: 0 2em;
     position: relative;
     box-sizing: border-box;
 }
 
-nav {
-    position: relative;
-}
 
 .navbar-items {
     list-style: none;
@@ -176,38 +224,144 @@ hr {
  background-color: #fff;
 }
 
-/* Main Banner */ 
-.main-banner {
+/* PORTFOLIO */
+
+.portfolio {
+    background-color: var(--bg-color-02);
+}
+
+.portfolio-container {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.portfolio-box {
+    position: relative;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0.6rem var(--bg-color-01);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.portfolio-box img:hover {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
-    margin-top: 60px;
-    background-color: #525050;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(30rem);
+    transition: 0.5s ease;
 }
 
-.text-container  {
-    height: auto;
-    margin: 0 20px 0 0;
-    padding: 0;
-    color: #fff;
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
 }
 
-.text-container h1 {
-    font-size: 35px;
+.portfolio-box .portfolio-layer h4 {
+    font-size: 1.8rem;
 }
 
-.text-container span {
-    font-size: 20px;
+.portfolio-layer p {
+    margin: 0.2rem 0 5rem;
 }
 
-.text-container p {
-    font-size: 10px;
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: var(--text-color);
+    border-radius: 50%;
 }
 
-.foto_perfil {
-    width: 200px;
-    margin-top: 0;
-    margin-left: 20px;
+.portfolio-layer a i {
+    font-size: 1.2rem;
+    color: var(--bg-color-02);
+}
+/*************/
+
+/*FORMULARIO*/
+
+form {
+    max-width: 45rem;
+    margin: 0.6rem auto;
+    text-align: center;
+    margin-bottom: 2rem;
+
+  
 }
 
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+form .input-box input, 
+form textarea {
+    width: 100%;
+    margin: 0.4rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: var(--bg-color-02);
+    color: var(--text-color);
+
+}
+
+form textarea {
+    resize: none;
+    height: 15rem;
+}
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: var(--bg-color-01);
+}
+
+/*SOCIAL MEDIAS*/
+
+/* Button */
+.btn {
+    display: flex;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--main-color);
+    color: var(--bg-color-02);
+    border-radius: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease;
+    margin-top: 1.2rem;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0.3rem var(--main-color);
+    background-color: inherit;
+    color: var(--main-color);
+    cursor: pointer;
+}
