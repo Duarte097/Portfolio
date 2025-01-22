@@ -60,6 +60,21 @@ hr {
     background-image: linear-gradient(to left, #21d4fd, #b721ff);
 }
 
+#scroll-top {
+    display: inline-flex;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(to left, #21d4fd, #b721ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 50%;
+    font-size: 2rem;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
 .logo {
     font-size: 1.7rem;
     color: var(--text-color);
@@ -458,7 +473,7 @@ footer {
 }
 
 .change .bar3 {
-    transform: translate(0, -0.65rem) rotate(45deg);
+    transform: translate(0, -0.40rem) rotate(45deg);
 }
 
 .cmais, .mysql, .csharp, .frontandback {
