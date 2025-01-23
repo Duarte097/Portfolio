@@ -182,7 +182,6 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
 }
 
 .services {
@@ -201,11 +200,12 @@ section {
     margin-bottom: 1rem;
 }
 
+
 .services-container .services-box {
     padding: 2rem 1rem 2.5rem;
     border-radius: 1.2rem;
     text-align: center;
-    border: solid 0.15rem var(--main-color);
+    border: solid 0.15rem var(--main-color);    
     background-color: var(--bg-color-02);
     transition: 0.5 ease;
 }
@@ -246,30 +246,6 @@ section {
     padding: 0 2em;
     position: relative;
     box-sizing: border-box;
-}
-
-/* NAVBAR ITEMS */
-
-.navbar-items, .navbar-items-responsive {
-    list-style: none;
-    position: absolute;
-    display: inline-block;
-    height: 80px;
-    margin: 0;
-    padding: 0;
-    line-height: 80px;
-    left: 36%;
-}
-
-.navbar-items li, .navbar-items-responsive li {
-    display: inline-block;
-    margin-left: 30px;
-    font-size: 16px;
-}
-
-.navbar-items li a, .navbar-items-responsive li a {
-    color:  #fff;
-    text-decoration: none;
 }
 
 hr {
@@ -476,7 +452,7 @@ footer {
     transform: translate(0, -0.40rem) rotate(45deg);
 }
 
-.cmais, .mysql, .csharp, .frontandback {
+.cmais, .mysql, .csharp, .frontandback, .python, .html, .node {
     width: 65px;
     height: 65px;
     margin: 0 auto;
