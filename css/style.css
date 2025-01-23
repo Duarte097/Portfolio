@@ -34,8 +34,6 @@ html {
 body{
     background-color: var(--bg-color-02);
     color: var(--text-color);
-    /*margin: 0;
-    padding: 0;*/
 }
 
 header {
@@ -49,8 +47,6 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-
-    /*border: solid 1px var(--bg-color-01);*/
 }
 
 hr {
@@ -130,9 +126,6 @@ section {
     border-right: solid 0.6rem ;
     border-bottom: solid 0.6rem;
     border-image: linear-gradient(135deg, transparent 50%, var(--main-color2)) 1;
-    /*width: 40%;
-    margin-top: 0;
-    margin-left: auto;*/
 }
 
 .sobre-img {
@@ -320,7 +313,6 @@ hr {
     align-items: center;
     width: 2.5rem;
     height: 2.5rem;
-    /*background: var(--text-color);*/
     border-radius: 50%;
 }
 
@@ -388,11 +380,9 @@ footer {
     align-items: center;
     width: 2.5rem;
     height: 2.5rem;
-    /*background: transparent;*/
     background: linear-gradient(to left, #21d4fd, #b721ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /*border: solid 0.15rem var(--main-color);*/
     border-radius: 50%;
     margin: 1.8rem 0.5rem;
     font-size: 2rem;
@@ -562,10 +552,6 @@ footer {
 }
 
 @media (min-width: 992px) {
-   /* .home-img, .sobre-img {
-        max-width: 35%;
-    }*/
-    
     .services-container {
         flex-direction: row;
         gap: 1.2rem;
