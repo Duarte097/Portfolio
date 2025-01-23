@@ -65,19 +65,31 @@ hr {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 2.42rem;
     position: fixed;
     right: 0.5rem;
     bottom: 0.5rem;
 }
 
-.logo {
-    font-size: 1.7rem;
-    color: var(--text-color);
-    font-weight: 600;
-    cursor: default;
+#scroll-top:hover {
+    background: linear-gradient(to left, #21d4fd, #b721ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 0 0.3rem var(--main-color);
 }
 
+.logo {
+    font-size: 1.7rem;
+    color: var(--main-color2);
+    font-weight: 600;
+    cursor: default;
+    background: linear-gradient(to left, #21d4fd, #b721ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo i {
+    padding: 5px;
+}
 .navbar-items-responsive {
     display: none;
     position: absolute;
@@ -219,13 +231,15 @@ section {
 }
 
 .services-box p {
-    margin: 0.5rem;
-    letter-spacing: 0.1rem;
+    margin: 0.1rem;
+    letter-spacing: 0.01rem;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 0.9rem;
+    text-align: left;
 }
 
 
@@ -329,15 +343,12 @@ form {
     margin: 0.6rem auto;
     text-align: center;
     margin-bottom: 2rem;
-
-  
 }
 
 form .input-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 form .input-box input, 
@@ -350,9 +361,10 @@ form textarea {
     border-radius: 0.5rem;
     background-color: var(--bg-color-02);
     color: var(--text-color);
-
 }
-
+input::placeholder, textarea::placeholder {
+    color: var(--text-color);
+}
 form textarea {
     resize: none;
     height: 15rem;
