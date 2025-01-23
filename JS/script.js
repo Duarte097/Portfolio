@@ -1,16 +1,12 @@
 const menuHamburguer = document.querySelector('.menu-hamburguer');
+const nav = document.querySelector('.navbar-items-responsive');
 menuHamburguer.addEventListener('click', () => {
     toggleMenu();
 })
 
 function toggleMenu() {
-    const nav = document.querySelector('.navbar-items-responsive');
     menuHamburguer.classList.toggle('change');
 
-    if (menuHamburguer.classList.contains('change')) {
-        nav.style.display = 'block';
-    } else {
-        nav.style.display = 'none'; 
-    } 
+    nav.style.display = menuHamburguer.classList.contains('change') ? 'block' : 'none';
 }
 
